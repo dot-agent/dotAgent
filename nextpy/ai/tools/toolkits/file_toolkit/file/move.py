@@ -41,7 +41,7 @@ class MoveFileTool(BaseFileToolMixin, BaseTool):
             destination_path_ = self.get_relative_path(destination_path)
         except FileValidationError:
             return INVALID_PATH_TEMPLATE.format(
-                arg_name="destination_path_", value=destination_path_
+                arg_name="destination_path_", value=destination_path
             )
         if not source_path_.exists():
             return f"Error: no such file or directory {source_path}"
